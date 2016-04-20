@@ -9,5 +9,5 @@ node {
   echo "placeholder for docker image push"
   
   stage 'Launch docker container'
-  echo "placeholder for launch docker container'
+  echo "placeholder for launch docker container"
 }
