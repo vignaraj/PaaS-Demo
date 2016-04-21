@@ -3,10 +3,10 @@ node ('docker') {
   checkout scm
   
   stage 'Docker image build'
-  docker version
+  sh 'docker version'
   
   stage 'Docker image push'
-  docker info
+  sh 'docker info'
 }
 
 node ('docker') {
