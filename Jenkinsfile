@@ -1,7 +1,8 @@
 node ('docker') {
   stage 'SCM Checkout'
+  git url: 'https://github.com/sjeeva/sample-docker-compose.git'
   checkout scm
-  sh 'env'
+  sh 'ls -l'
   
   stage 'Docker image build'
   echo "${TEST}" 
