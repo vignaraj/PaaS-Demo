@@ -3,6 +3,7 @@ node ('docker') {
   checkout scm
   
   stage 'Docker image build'
+  echo ${TEST}
   sh 'docker version'
   
   stage 'Docker image push'
