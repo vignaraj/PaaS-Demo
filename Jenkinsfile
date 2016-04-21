@@ -3,6 +3,8 @@ node ('docker') {
   checkout scm
   
   stage 'Docker image build'
+  def dockHome = tool 'docker'
+  echo $dockHome
   sh 'docker version'
   
   stage 'Docker image push'
