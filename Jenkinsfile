@@ -6,7 +6,11 @@ node ('docker') {
   sh 'docker version'
   
   stage 'Docker image push'
-  sh 'docker info'
+  parallel 'branch1' : {
+    sh "docker info"
+  }, 'branch2' : {
+    sh "echo branch 2"
+  }
 
   stage 'Launch docker container'
   echo "placeholder for launch docker container"
