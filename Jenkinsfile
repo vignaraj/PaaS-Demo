@@ -5,6 +5,10 @@ node () {
   stage 'Docker image build'
   sh 'echo docker version'
   
+   
+  stage 'Another step'
+  sh 'echo docker version'
+  
   stage 'Docker image push'
   parallel 'branch1' : {
     sh "echo docker info"
