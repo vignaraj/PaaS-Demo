@@ -1,13 +1,13 @@
-node ('docker') {
+node () {
   stage 'SCM Checkout'
   checkout scm
   
   stage 'Docker image build'
-  sh 'docker version'
+  sh 'echo docker version'
   
   stage 'Docker image push'
   parallel 'branch1' : {
-    sh "docker info"
+    sh "echo docker info"
   }, 'branch2' : {
     sh "echo branch 2"
   }
