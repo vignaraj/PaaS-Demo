@@ -1,4 +1,4 @@
-node (broker) {
+node (docker) {
   stage 'SCM Checkout'
   checkout scm
   
