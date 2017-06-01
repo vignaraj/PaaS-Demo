@@ -1,4 +1,4 @@
-node (vignaraj-node) {
+node (broker) {
   stage 'SCM Checkout'
   checkout scm
   
